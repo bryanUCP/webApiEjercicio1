@@ -36,6 +36,43 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "webApiEj1.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "webApiEj1.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/webApiEj1.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/webApiEj1.Application.dll": {}
+        }
+      },
+      "webApiEj1.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/webApiEj1.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/webApiEj1.Domain.dll": {}
+        }
+      },
+      "webApiEj1.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "webApiEj1.Application": "1.0.0",
+          "webApiEj1.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/webApiEj1.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/webApiEj1.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -75,11 +112,28 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "webApiEj1.Application/1.0.0": {
+      "type": "project",
+      "path": "../webApiEj1.Application/webApiEj1.Application.csproj",
+      "msbuildProject": "../webApiEj1.Application/webApiEj1.Application.csproj"
+    },
+    "webApiEj1.Domain/1.0.0": {
+      "type": "project",
+      "path": "../webApiEj1.Domain/webApiEj1.Domain.csproj",
+      "msbuildProject": "../webApiEj1.Domain/webApiEj1.Domain.csproj"
+    },
+    "webApiEj1.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../webApiEj1.Infrastructure/webApiEj1.Infrastructure.csproj",
+      "msbuildProject": "../webApiEj1.Infrastructure/webApiEj1.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.2"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.2",
+      "webApiEj1.Application >= 1.0.0",
+      "webApiEj1.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -115,7 +169,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CURSO JIMMY GIT\\AplicacionEjercicio1\\webApiEj1.Application\\webApiEj1.Application.csproj": {
+              "projectPath": "D:\\CURSO JIMMY GIT\\AplicacionEjercicio1\\webApiEj1.Application\\webApiEj1.Application.csproj"
+            },
+            "D:\\CURSO JIMMY GIT\\AplicacionEjercicio1\\webApiEj1.Infrastructure\\webApiEj1.Infrastructure.csproj": {
+              "projectPath": "D:\\CURSO JIMMY GIT\\AplicacionEjercicio1\\webApiEj1.Infrastructure\\webApiEj1.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
