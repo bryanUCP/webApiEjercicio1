@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="webApiEj1.Api/webApiEj1.Api.csproj" />
+  <Project Path="webApiEj1.Application/webApiEj1.Application.csproj" />
+  <Project Path="webApiEj1.Domain/webApiEj1.Domain.csproj" />
+  <Project Path="webApiEj1.Infrastructure/webApiEj1.Infrastructure.csproj" />
+</Solution>
